@@ -15,22 +15,23 @@ class TrendingThisWeek::CLI
     5. Austin"
     picked_city = STDIN.gets.strip
     @city_name = nil
+    @url = 'https://foursquare.com/foursquare/list/trending-this-week-'
     case picked_city
       when '1'
         @city_name = 'NYC'
-        @url = "https://foursquare.com/foursquare/list/trending-this-week-new-york-city"
+        @url << "new-york-city"
       when '2'
         @city_name = 'Los Angeles'
-        @url = "https://foursquare.com/foursquare/list/trending-this-week-los-angeles"
+        @url << "los-angeles"
       when '3'
         @city_name = 'Chicago'
-        @url = "https://foursquare.com/foursquare/list/trending-this-week-chicago"
+        @url << "chicago"
       when '4'
         @city_name = 'San Francisco'
-        @url = "https://foursquare.com/foursquare/list/trending-this-week-san-francisco"
+        @url << "san-francisco"
       when '5'
         @city_name = 'Austin'
-        @url = "https://foursquare.com/foursquare/list/trending-this-week-austin"
+        @url << "austin"
       when 'exit'
         goodbye
       else
